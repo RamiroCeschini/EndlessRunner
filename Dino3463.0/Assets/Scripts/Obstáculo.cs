@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Obstáculo : MonoBehaviour
+
+{
+    public float obstacleSpeed = -2f;
+
+    void Start()
+    {
+
+    }
+
+
+    void Update()
+    {
+
+            transform.Translate(obstacleSpeed * Time.deltaTime, 0f, 0f);
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "TriggerObs")
+        {
+            Debug.Log("Llego al trigger");
+           Destroy(gameObject);
+        }
+    }
+}
