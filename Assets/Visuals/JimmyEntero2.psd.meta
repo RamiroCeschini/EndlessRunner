@@ -115,12 +115,12 @@ TextureImporter:
       name: JimmyEntero2_0
       rect:
         serializedVersion: 2
-        x: 167
+        x: 168
         y: 244
         width: 278
         height: 429
       alignment: 9
-      pivot: {x: 0.48056436, y: 0.05708843}
+      pivot: {x: 0.45788947, y: 0.04239468}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

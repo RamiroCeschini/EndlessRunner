@@ -6,10 +6,14 @@ public class JugadorSc : MonoBehaviour
 {
     public float jumpForce;
     public float fallForce;
-    public Rigidbody2D _rigidbody;
-    public bool canJump;
-    public Animator _animator;
-    public BoxCollider2D _collider;
+    private Rigidbody2D _rigidbody;
+    private bool canJump;
+    private Animator _animator;
+    private BoxCollider2D _collider;
+    public GameObject textoGameOver;
+    public GameObject textoScoreGameOver;
+    public GameObject textoScore;
+    public GameObject botonRestart;
 
     void Start()
     {
@@ -25,6 +29,7 @@ public class JugadorSc : MonoBehaviour
         {
             _rigidbody.AddForce(new Vector2(0f, jumpForce));
             _animator.SetBool("Jump", true);
+            _animator.SetBool("Crouch", false);
             canJump = false;
         }
 
@@ -59,8 +64,13 @@ public class JugadorSc : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
+          
             Time.timeScale = 0;
-           // Debug.Log("Toco obstaculo");
+           Debug.Log("Toco obstaculo");
+           textoGameOver.active = true;
+           textoScoreGameOver.active = true;
+           textoScore.active = false;
+            botonRestart.active = true;
         }
     }
 }
