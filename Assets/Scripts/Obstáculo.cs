@@ -7,12 +7,6 @@ public class Obstáculo : MonoBehaviour
 {
     public float obstacleSpeed = -2f;
 
-    void Start()
-    {
-
-    }
-
-
     void Update()
     {
 

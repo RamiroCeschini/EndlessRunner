@@ -6,11 +6,6 @@ public class Piso : MonoBehaviour
 {
     public float floorSpeed = -2f;
     
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
