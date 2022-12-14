@@ -15,7 +15,6 @@ public class FinalScore : MonoBehaviour
        ScoreCount = Score.gameObject.GetComponent<Score>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         finalScore = (int)ScoreCount.scoreNumber;

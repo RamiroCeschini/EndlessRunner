@@ -14,6 +14,7 @@ public class JugadorSc : MonoBehaviour
     public GameObject textoScoreGameOver;
     public GameObject textoScore;
     public GameObject botonRestart;
+    public GameObject botonExit;
 
     void Start()
     {
@@ -42,14 +43,12 @@ public class JugadorSc : MonoBehaviour
         {
             _collider.enabled = false;
             _animator.SetBool("Crouch", true);
-           // Debug.Log("Se agacha");
         }
 
         if (Input.GetKeyUp(KeyCode.DownArrow) && canJump == true)
         {
             _collider.enabled = true;
             _animator.SetBool("Crouch", false);
-           // Debug.Log("Se paró");
         }
     }
 
@@ -59,18 +58,17 @@ public class JugadorSc : MonoBehaviour
         {
             _animator.SetBool("Jump", false);
             canJump = true;
-           // Debug.Log("Toco piso");
         }
 
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
           
             Time.timeScale = 0;
-           Debug.Log("Toco obstaculo");
            textoGameOver.active = true;
            textoScoreGameOver.active = true;
            textoScore.active = false;
             botonRestart.active = true;
+            botonExit.active = true;
         }
     }
 }

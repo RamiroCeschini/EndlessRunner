@@ -13,7 +13,6 @@ public class Piso : MonoBehaviour
 
         if (transform.position.x <= -21.22)
         {
-           // Debug.Log("Llegó");
             transform.position = new Vector3(42.44f, transform.position.y, 0f);
         }
     }

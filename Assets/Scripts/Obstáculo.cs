@@ -18,7 +18,6 @@ public class Obstáculo : MonoBehaviour
     {
         if (collision.tag == "TriggerObs")
         {
-            Debug.Log("Llego al trigger");
            Destroy(gameObject);
         }
     }
